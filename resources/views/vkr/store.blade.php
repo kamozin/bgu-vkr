@@ -187,7 +187,7 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select name="id_fakultet" id="id_fakultet" class="form-control">
-                                            <option value="0" selected >Выбирете факультет</option>
+                                            <option value="0" selected >Выберите факультет</option>
                                         @foreach($facultets as $f)
 
                                             <option value="{{$f->id}}" @if(Input::old('id_fakultet')==$f->id)  @endif>{{$f->name_fakultet}}</option>
