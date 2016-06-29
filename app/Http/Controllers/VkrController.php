@@ -148,7 +148,9 @@ class VkrController extends Controller
     public function update()
     {
 
-        if (empty(Input::file('file'))) {
+        $files_vkr=Input::file('file');
+
+        if (empty($files_vkr)) {
 
 
             $vkr = Vkr::find(Input::get('id'));
