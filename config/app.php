@@ -144,10 +144,10 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-		Alexusmai\Ruslug\RuslugServiceProvider::class,
+//		Alexusmai\Ruslug\RuslugServiceProvider::class,
 
 		// Laravel IDE helper
-		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+//		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
 
 
@@ -198,7 +198,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-		'Slug' => Alexusmai\Ruslug\RuslugFacade::class,
+//		'Slug' => Alexusmai\Ruslug\RuslugFacade::class,
 	],
 
 ];
