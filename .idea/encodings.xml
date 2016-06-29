@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/FacultetController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/NavigationController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/TranslitController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/VkrController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/YearController.php" charset="UTF-8" />

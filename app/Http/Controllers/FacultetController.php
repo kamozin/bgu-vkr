@@ -35,6 +35,8 @@ class FacultetController extends Controller
         return view('facultets.show', ['facultets' => $facultets, 'nav'=>$nav, 'year'=>$year]);
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -46,7 +48,8 @@ class FacultetController extends Controller
         $facultet = new Facultets();
 
         $facultet->name_fakultet = $request->name_fakultet;
-        $facultet->url_fakultet = \Slug::make($request->name_fakultet);
+        $str=$request->name_fakultet;
+        $facultet->url_fakultet = TranslitController::str2url($str);
         //Дата создания факультета
         $dt = Carbon::today();
         $createdAt = Carbon::parse($dt);
@@ -120,7 +123,8 @@ class FacultetController extends Controller
         $facultet = Facultets::find($request->id);
 
         $facultet->name_fakultet = $request->name_fakultet;
-        $facultet->url_fakultet = \Slug::make($request->name_fakultet);
+        $str=$request->name_fakultet;
+        $facultet->url_fakultet = TranslitController::str2url($str);
         //Дата создания факультета
         $dt = Carbon::today();
         $createdAt = Carbon::parse($dt);
