@@ -24,7 +24,7 @@ Route::get('/vkr/store', 'VkrController@store');
 Route::get('/vkr/search', 'VkrController@store');
 Route::get('/vkr/edit/{id}', 'VkrController@edit');
 Route::get('/vkr/destroy/{id}', 'VkrController@index');
-//Route::get('/vkr/{facultet}/{year}', 'VkrController@search');
+Route::get('/vkr/{facultet}/{year}', 'VkrController@search');
 Route::post('/vkr/search/poll', 'VkrController@all');
 
 //Года
