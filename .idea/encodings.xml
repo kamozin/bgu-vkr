@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/FacultetController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/NavigationController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/VkrController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/YearController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Middleware/AdminMiddleware.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/app.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/auth/login.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/blocks/nav.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/deny.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/facultets/edit.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/facultets/show.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/facultets/store.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/user/edit.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/user/show.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/user/store.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/vkr/edit.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/vkr/show.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/vkr/showAll.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/vkr/store.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/year/show.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/year/store.blade.php" charset="UTF-8" />
+  </component>
+</project>
