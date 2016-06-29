@@ -140,7 +140,7 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                  
+
                         <form id="demo-form2" enctype="multipart/form-data"  method="POST" action="/vkr/search/poll" class="form-horizontal form-label-left">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="form-group">

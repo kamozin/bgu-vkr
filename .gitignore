@@ -1,4 +1,7 @@
 /vendor
 /node_modules
 .env
-
+/production
+/vkr
+/.idea
+www.zip
