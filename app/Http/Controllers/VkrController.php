@@ -269,12 +269,15 @@ class VkrController extends Controller
 
         $value = ['family', 'name', 'otchestvo', 'id_fakultet',  'napravlenie_podgotovki',  'profile',  'tema', 'dt',];
         $data = Input::all();
+
+        $data['dt']=$data['year'];
         $q = \DB::table('vkr');
 //        $i=0;
         if(Input::get('conformity')){
             foreach ($value as $v) {
 
                 if (!empty($data[$v])) {
+
 
                     $q->where($v, $data[$v]);
                 }
@@ -313,7 +316,8 @@ class VkrController extends Controller
 //        dd($vkr, $f);
         $nav=NavigationController::index();
         $year=YearController::year();
-        return view('vkr.showAll', ['vkr'=>$vkr, 'nav'=>$nav, 'year'=>$year, 'facultet'=>$f]);
+        $facultets = Facultets::all();
+        return view('vkr.showAll', ['vkr'=>$vkr, 'nav'=>$nav, 'year'=>$year, 'facultet'=>$f, 'facultets'=>$facultets]);
 
     }
 }
