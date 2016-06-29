@@ -26,7 +26,8 @@ class YearController extends Controller {
 	static function year()
 	{
 		//
-		$year=Year::all();
+		$year=Year::orderBy('year', 'desc')->get();
+
 		return $year;
 	}
 
