@@ -69,14 +69,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="napravlenie_podgotovki" class="control-label col-md-3 col-sm-3 col-xs-12">Направление подготовки</label>
+                        <label for="napravlenie_podgotovki" class="control-label col-md-3 col-sm-3 col-xs-12">Направление подготовки (код, наименование)</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <input id="napravlenie_podgotovki" class="form-control col-md-7 col-xs-12" value="{{Input::old('napravlenie_podgotovki')}}" type="text" name="napravlenie_podgotovki">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="profile" class="control-label col-md-3 col-sm-3 col-xs-12">Профиль</label>
+                        <label for="profile" class="control-label col-md-3 col-sm-3 col-xs-12">Направление (профиль)</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <input id="profile" class="form-control col-md-7 col-xs-12" value="{{Input::old('profile')}}" type="text" name="profile">
                         </div>

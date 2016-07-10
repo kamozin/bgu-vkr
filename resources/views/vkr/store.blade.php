@@ -72,8 +72,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="id_fakultet" class="control-label col-md-3  col-sm-3 col-xs-12">Факультет<span
-                                                class="required">*</span>
+                                    <label for="id_fakultet" class="control-label col-md-3  col-sm-3 col-xs-12">Факультет
                                     </label>
 
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -96,8 +95,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="napravlenie_podgotovki"
-                                           class="control-label col-md-3 col-sm-3 col-xs-12">Направление
-                                        подготовки</label>
+                                           class="control-label col-md-3 col-sm-3 col-xs-12">Направление подготовки (код, наименование)</label>
 
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="napravlenie_podgotovki" class="form-control col-md-7 col-xs-12"
@@ -108,7 +106,7 @@
 
                                 <div class="form-group">
                                     <label for="profile"
-                                           class="control-label col-md-3 col-sm-3 col-xs-12">Профиль</label>
+                                           class="control-label col-md-3 col-sm-3 col-xs-12">Направление (профиль)</label>
 
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="profile" class="form-control col-md-7 col-xs-12"
@@ -231,8 +229,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="napravlenie_podgotovki" class="control-label col-md-3 col-sm-3 col-xs-12">Направление
-                                    подготовки</label>
+                                <label for="napravlenie_podgotovki" class="control-label col-md-3 col-sm-3 col-xs-12">Направление подготовки (код, наименование)</label>
 
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="napravlenie_podgotovki" class="form-control col-md-7 col-xs-12"
@@ -242,7 +239,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="profile" class="control-label col-md-3 col-sm-3 col-xs-12">Профиль</label>
+                                <label for="profile" class="control-label col-md-3 col-sm-3 col-xs-12">Направление (профиль)</label>
 
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="profile" class="form-control col-md-7 col-xs-12"
