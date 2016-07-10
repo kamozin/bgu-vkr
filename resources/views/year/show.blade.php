@@ -17,6 +17,16 @@
                     <div class="panel-body">
                         <a href="/year/store" class="btn btn-primary">Добавить год</a>
                     </div>
+                    @if (Session::has('error'))
+
+                        <div class="alert alert-error alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">×</span>
+                            </button>
+                            <strong>{{Session::get('error')}}</strong>
+                        </div>
+
+                    @endif
                     <div class="panel-body">
                         <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
                                cellspacing="0"
@@ -25,6 +35,8 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Год</th>
+                                <th>Редактировать</th>
+                                <th>Удалить</th>
 
                             </tr>
                             </thead>
@@ -33,6 +45,8 @@
                                 <tr>
                                     <td>{{$y->id}}</td>
                                     <td>{{$y->year}}</td>
+                                    <td><a href="/year/edit/{{$y->id}}">Редактировать</a></td>
+                                    <td><a href="/year/delete/{{$y->id}}">Удалить</a></td>
 
 
                                 </tr>

@@ -45,6 +45,19 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="facultet_id" class="control-label col-md-3  col-sm-3 col-xs-12">Факультет пользователя<span class="required">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select name="facultet_id" id="facultet_id" class="form-control">
+                                        <option value="">Выберите факультет</option>
+                                        @foreach($facultet as $f)
+                                            <option value="{{$f->id}}" @if(Auth::user()->facultet_id==$f->id) selected @endif>{{$f->name_fakultet}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="role" class="control-label col-md-3  col-sm-3 col-xs-12">Группа пользователя<span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">

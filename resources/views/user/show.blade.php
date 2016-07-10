@@ -23,6 +23,7 @@
                                 <th>Элетронная почта</th>
                                 <th>Группа пользователя</th>
                                 <th>Редактировать</th>
+                                <th>Удалить</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -37,6 +38,7 @@
                                         <td>Пользователь</td>
                                     @endif
                                     <td><a href="/users/edit/{{$u->id}}">Редактировать данные</a></td>
+                                    <td><a href="/users/delete/{{$u->id}}">Удалить пользователя</a></td>
 
                                 </tr>
                             @endforeach

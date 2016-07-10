@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Vkr;
 use Illuminate\Http\Request;
 
 use App\Year;
@@ -92,7 +93,21 @@ class YearController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$years=Year::find($id);
+
+		$yearss=$years->year;
+
+		$vkr=Vkr::where('dt', '=', $yearss)->get();
+
+		if(empty($vkr->items)){
+			$nav=NavigationController::index();
+			$year=$this->year();
+			return view('year.edit', ['years'=>$years, 'nav'=>$nav, 'year'=>$year]);
+		}else{
+
+
+			return redirect()->back()->with('error', 'По году '.$yearss.' в базе данных ВКР существуют записи. Редактирование запрещенно.');
+		}
 	}
 
 	/**
@@ -101,9 +116,15 @@ class YearController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request)
 	{
-		//
+		$year=Year::find($request->id);
+
+		$year->year=$request->year;
+
+		$year->save();
+
+		return redirect('/year');
 	}
 
 	/**
@@ -112,9 +133,23 @@ class YearController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function delete($id)
 	{
-		//
+		$years=Year::find($id);
+
+		$yearss=$years->year;
+
+		$vkr=Vkr::where('dt', '=', $yearss)->get();
+
+		if(count($vkr)==0){
+
+
+			$years->delete();
+			return redirect()->back();
+		}else if(count($vkr)>0){
+
+			return redirect()->back()->with('error', 'По году '.$yearss.' в базе данных ВКР существуют записи. Удаление запрещенно.');
+		}
 	}
 
 }

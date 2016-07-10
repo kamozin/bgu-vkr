@@ -239,7 +239,11 @@ class VkrController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $vkr=Vkr::find($id);
+
+        $vkr->delete();
+
+        return redirect()->back();
     }
 
     public function search(Request $request)

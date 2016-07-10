@@ -6,15 +6,14 @@
             @if(Auth::user()->role==1)
                 <li><a href="/vkr/store"><i class="fa fa-plus-circle"></i>Добавить/Найти ВКР</a>
                 </li>
-                {{--<li><a href="/vkr/all"><i class="fa fa-plus-circle"></i>Просмотреь все работы</a>--}}
-                {{--</li>--}}
-                @else
+            @else
                 <li><a href="/vkr/search"><i class="fa fa-plus-circle"></i>Поиск ВКР</a>
                 </li>
 
                 @endif
 
             @foreach($nav as $n)
+                @if(Auth::user()->role==1 && Auth::user()->facultet_id==0)
                 <li><a >{{$n['name_fakultet']}}<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu" style="display: none">
                         @foreach($year as $y)
@@ -23,12 +22,22 @@
                             @endforeach
                     </ul>
                 </li>
+                @elseif((Auth::user()->role==1 && Auth::user()->facultet_id==$n['id'])||(Auth::user()->role==0 && Auth::user()->facultet_id==$n['id']))
+                        <li><a >{{$n['name_fakultet']}}<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu" style="display: none">
+                                @foreach($year as $y)
+                                    <li><a href="/vkr/{{$n['url_fakultet']}}/{{$y->year}}">{{$y->year}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
 
+                    @endif
                 @endforeach
 
         </ul>
     </div>
-    @if(Auth::user()->role==1)
+    @if(Auth::user()->role==1 && Auth::user()->facultet_id==0)
     <div class="menu_section">
         <h3>Настройки</h3>
         <ul class="nav side-menu">

@@ -23,6 +23,7 @@
     <file url="file://$PROJECT_DIR$/resources/views/vkr/show.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/vkr/showAll.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/vkr/store.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/year/edit.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/year/show.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/year/store.blade.php" charset="UTF-8" />
   </component>

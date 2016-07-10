@@ -23,7 +23,7 @@ Route::post('/vkr/update', 'VkrController@update');
 Route::get('/vkr/store', 'VkrController@store');
 Route::get('/vkr/search', 'VkrController@store');
 Route::get('/vkr/edit/{id}', 'VkrController@edit');
-Route::get('/vkr/destroy/{id}', 'VkrController@index');
+Route::get('/vkr/destroy/{id}', 'VkrController@destroy');
 Route::get('/vkr/{facultet}/{year}', 'VkrController@search');
 Route::post('/vkr/search/poll', 'VkrController@all');
 
@@ -31,6 +31,9 @@ Route::post('/vkr/search/poll', 'VkrController@all');
 Route::get('/year', 'YearController@index');
 Route::get('/year/store', 'YearController@store');
 Route::post('/year/create', 'YearController@create');
+Route::post('/year/update', 'YearController@update');
+Route::get('/year/edit/{id}', 'YearController@edit');
+Route::get('/year/delete/{id}', 'YearController@delete');
 
 //Роуты для факультетов
 	Route::get('/facultets', 'FacultetController@index');
@@ -45,7 +48,7 @@ Route::post('/year/create', 'YearController@create');
 	Route::post('/users/update', 'UserController@update');
 	Route::get('/users/store', 'UserController@store');
 	Route::get('/users/edit/{id}', 'UserController@edit');
-	Route::get('/users/destroy/{id}', 'UserController@index');
+	Route::get('/users/delete/{id}', 'UserController@delete');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -114,7 +114,7 @@
         <!-- footer content -->
         <footer>
             <div class="pull-right">
-                БГУ <a href="https://brgu.ru">Перейти на сайт</a>
+                БГУ <a target="_blank" href="http://brgu.ru">Перейти на сайт</a>
             </div>
             <div class="clearfix"></div>
         </footer>

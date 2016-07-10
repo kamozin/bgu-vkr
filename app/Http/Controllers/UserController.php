@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\Facultets;
 use Illuminate\Http\Request;
 use App\User;
 
@@ -43,6 +44,7 @@ class UserController extends Controller {
 		$user->name=$request->name;
 		$user->email=$request->email;
 		$user->password=bcrypt($request->password);
+		$user->facultet_id=$request->facultet_id;
 		$user->role=$request->role;
 
 		if($user->save()){
@@ -68,7 +70,8 @@ class UserController extends Controller {
 		//
 		$nav=\App\Http\Controllers\NavigationController::index();
 		$year=YearController::year();
-		return view ('user.store', ['nav'=>$nav, 'year'=>$year]);
+		$facultet=Facultets::all();
+		return view ('user.store', ['nav'=>$nav, 'year'=>$year, 'facultet'=>$facultet]);
 	}
 
 	/**
@@ -98,7 +101,8 @@ class UserController extends Controller {
 
 		$nav=NavigationController::index();
 		$year=YearController::year();
-		return view ('user.edit', ['user'=>$user, 'nav'=>$nav, 'year'=>$year]);
+		$facultet=Facultets::all();
+		return view ('user.edit', ['user'=>$user, 'nav'=>$nav, 'year'=>$year, 'facultet'=>$facultet]);
 
 	}
 
@@ -123,8 +127,9 @@ class UserController extends Controller {
 
 			$user->name=$request->name;
 			$user->email=$request->email;
+			$user->facultet_id=$request->facultet_id;
 			$user->role=$request->role;
-
+//			dd($request->all());
 			if($user->save()){
 
 				return redirect('/users');
@@ -140,11 +145,13 @@ class UserController extends Controller {
 			$user=User::find($id);
 			$user->name=$request->name;
 			$user->email=$request->email;
+			$user->facultet_id=$request->facultet_id;
 			$user->password=bcrypt($request->password);
 
 
 			$user->role=$request->role;
 
+				dd($user);
 			if($user->save()){
 
 				return redirect('/users');
@@ -164,7 +171,7 @@ class UserController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy(Request $request)
+	public function delete(Request $request)
 	{
 
 		$id=$request->id;
@@ -172,6 +179,8 @@ class UserController extends Controller {
 		$user=User::find($id);
 
 		$user->delete();
+
+		return redirect()->back();
 	}
 
 }
