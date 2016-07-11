@@ -48,7 +48,13 @@
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select name="facultet_id" id="facultet_id" class="form-control">
                                         @foreach($facultet as $f)
+                                            @if(Auth::user()->facultet_id==0)
                                         <option value="{{$f->id}}">{{$f->name_fakultet}}</option>
+                                            @elseif(Auth::user()->facultet_id>0)
+                                                @if(Auth::user()->facultet_id==$f->id)
+                                                <option value="{{$f->id}}">{{$f->name_fakultet}}</option>
+                                                @endif
+                                                @endif
                                         @endforeach
                                     </select>
                                 </div>

@@ -28,6 +28,23 @@
                             </thead>
                             <tbody>
                             @foreach($users as $u)
+                                @if(Auth::user()->facultet_id==0)
+                                    <tr>
+                                        <td>{{$u->id}}</td>
+                                        <td>{{$u->name}}</td>
+                                        <td>{{$u->email}}</td>
+                                        @if($u->role==1)
+                                            <td>Администратор</td>
+                                        @else
+                                            <td>Пользователь</td>
+                                        @endif
+                                        <td><a href="/users/edit/{{$u->id}}">Редактировать данные</a></td>
+                                        <td><a href="/users/delete/{{$u->id}}">Удалить пользователя</a></td>
+
+                                    </tr>
+
+                                    @elseif(Auth::user()->facultet_id>0)
+                               @if(Auth::user()->facultet_id==$u->facultet_id)
                                 <tr>
                                     <td>{{$u->id}}</td>
                                     <td>{{$u->name}}</td>
@@ -39,8 +56,9 @@
                                     @endif
                                     <td><a href="/users/edit/{{$u->id}}">Редактировать данные</a></td>
                                     <td><a href="/users/delete/{{$u->id}}">Удалить пользователя</a></td>
-
+                                @endif
                                 </tr>
+                                @endif
                             @endforeach
 
                             </tbody>

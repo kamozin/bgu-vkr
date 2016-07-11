@@ -49,7 +49,14 @@
             </li>
         </ul>
     </div>
-    @else
+    @elseif(Auth::user()->role==1 && Auth::user()->facultet_id>0)
+        <div class="menu_section">
+            <h3>Настройки</h3>
+            <ul class="nav side-menu">
+                <li><a href="/users"><i class="fa fa-laptop"></i> Пользователи</a>
+                </li>
 
+            </ul>
+        </div>
     @endif
 </div>

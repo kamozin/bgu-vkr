@@ -51,8 +51,15 @@
                                     <select name="facultet_id" id="facultet_id" class="form-control">
                                         <option value="">Выберите факультет</option>
                                         @foreach($facultet as $f)
-                                            <option value="{{$f->id}}" @if(Auth::user()->facultet_id==$f->id) selected @endif>{{$f->name_fakultet}}</option>
-                                        @endforeach
+
+                                                @if(Auth::user()->facultet_id==0)
+                                                <option value="{{$f->id}}" @if($user->facultet_id==$f->id) selected @endif>{{$f->name_fakultet}}</option>
+                                            @elseif(Auth::user()->facultet_id>0)
+                                                    @if(Auth::user()->facultet_id==$f->id)
+                                                    <option value="{{$f->id}}" @if($user->facultet_id==$f->id) selected @endif>{{$f->name_fakultet}}</option>
+                                                    @endif
+                                                @endif
+                                            @endforeach
                                     </select>
                                 </div>
                             </div>
